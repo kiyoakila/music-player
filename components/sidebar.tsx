@@ -54,7 +54,6 @@ const musicMenu = [
 
 const Sidebar = () => {
   const { playlists } = usePlaylist();
-  console.log(playlists);
 
   return (
     // container
