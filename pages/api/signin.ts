@@ -20,7 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         email: user.email,
         time: Date.now(),
       },
-      process.env.JWT_SECRET,
+      "hello",
       {
         expiresIn: "8h",
       }
@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.setHeader(
       "Set-Cookie",
-      cookie.serialize(process.env.COOKIE_NAME, token, {
+      cookie.serialize("TRAX_ACCESS_TOKEN", token, {
         httpOnly: true,
         maxAge: 8 * 60 * 60,
         path: "/",
