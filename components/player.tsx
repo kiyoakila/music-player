@@ -44,6 +44,7 @@ const Player = ({ songs, activeSong }) => {
   const repeatRef = useRef(repeat);
   const setActiveSong = useStoreActions((state: any) => state.changeActiveSong);
 
+  // animation for seek bar
   useEffect(() => {
     let timerId;
 
@@ -52,18 +53,21 @@ const Player = ({ songs, activeSong }) => {
         setSeek(soundRef.current.seek());
         timerId = requestAnimationFrame(f);
       };
-
+      // initial call
       timerId = requestAnimationFrame(f);
+      // cancel
       return () => cancelAnimationFrame(timerId);
     }
 
     cancelAnimationFrame(timerId);
   }, [playing, isSeeking]);
 
+  // watch the index change
   useEffect(() => {
     setActiveSong(songs[index]);
   }, [index, setActiveSong, songs]);
 
+  // keep the repeatRef and the repeat state in syn
   useEffect(() => {
     repeatRef.current = repeat;
   }, [repeat]);
@@ -90,7 +94,7 @@ const Player = ({ songs, activeSong }) => {
     setIndex((state) => {
       if (shuffle) {
         const next = Math.floor(Math.random() * songs.length);
-
+        // don't play the same song
         if (next === state) {
           return nextSong();
         }
