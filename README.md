@@ -8,7 +8,7 @@ With Next.js, Prisma ORM, postgreSQL.
 - Streaming playlist and favorite songs.
 
 ### Roadmap:
-- Library page
+- Library page - done
 - "create playlist"
 - "add to playlist"
 - "add to favorite"
@@ -16,7 +16,8 @@ With Next.js, Prisma ORM, postgreSQL.
 
 ## Preview
 ![preview1](/public/preview1.png)
-![preview1](/public/preview2.png)
+![preview2](/public/preview2.png)
+![preview3](/public/preview3.png)
 
 ## Environment
 Node: v18.4.0
