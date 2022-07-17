@@ -3,15 +3,15 @@
 With Next.js, Prisma ORM, postgreSQL.
 
 ### Finished:
-- playlist, homepage, artist homepage.
+- Playlist, homepage, artist homepage.
 - Playbar UI and streaming function (play, stop, repete, shuffle, next, prev)
 - Streaming playlist and favorite songs.
+- Library page 
+- Create playlist
+- Add song to favorite
 
 ### Roadmap:
-- Library page - done
-- "create playlist"
-- "add to playlist"
-- "add to favorite"
+- "add song to playlist"
 - Search music in repository
 
 ## Preview
